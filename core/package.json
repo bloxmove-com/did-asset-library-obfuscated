@@ -1,6 +1,6 @@
 {
   "name": "@bloxmove-com/did-asset-library-core-obfuscated",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "repository": {
@@ -13,7 +13,7 @@
   "scripts": {
     "docs": "typedoc --out docs src",
     "build": "npx hardhat compile && tsc",
-    "build:obfuscated": "npm run build && javascript-obfuscator ./lib --output ./lib-obfuscated",
+    "build:obfuscated": "javascript-obfuscator ./lib --output ./lib-obfuscated",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "lint:fix": "tslint -p tsconfig.json --fix",

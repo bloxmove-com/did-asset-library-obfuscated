@@ -1,12 +1,12 @@
 {
   "name": "@bloxmove-com/did-asset-library-core-obfuscated",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {
     "": {
       "name": "@bloxmove-com/did-asset-library-core-obfuscated",
-      "version": "0.0.21",
+      "version": "0.0.22",
       "license": "ISC",
       "dependencies": {
         "@digitalbazaar/ed25519-signature-2018": "^2.0.1",

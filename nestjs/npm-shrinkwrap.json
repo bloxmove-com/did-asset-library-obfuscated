@@ -1,15 +1,15 @@
 {
   "name": "@bloxmove-com/did-asset-library-nestjs-obfuscated",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {
     "": {
       "name": "@bloxmove-com/did-asset-library-nestjs-obfuscated",
-      "version": "0.0.21",
+      "version": "0.0.22",
       "license": "ISC",
       "dependencies": {
-        "@bloxmove-com/did-asset-library-core-obfuscated": "^0.0.21",
+        "@bloxmove-com/did-asset-library-core-obfuscated": "^0.0.22",
         "@nestjs/common": "^8.0.11",
         "@nestjs/config": "^1.0.2",
         "@nestjs/core": "^8.0.11",
@@ -467,9 +467,9 @@
       }
     },
     "node_modules/@bloxmove-com/did-asset-library-core-obfuscated": {
-      "version": "0.0.21",
-      "resolved": "https://npm.pkg.github.com/download/@bloxmove-com/did-asset-library-core-obfuscated/0.0.21/6f5b774a71c71827598d8e9c76a8d4c5be88b52715fd831f25c07cd95e3e126e",
-      "integrity": "sha512-OBFd4TFp4nhEnRNNikZjU8QHM4HYOb3USU026Z3tBt3sfgT/tSis7ZAvdmj+oEtEechWngJ7NzcICg+dHfTR0w==",
+      "version": "0.0.22",
+      "resolved": "https://npm.pkg.github.com/download/@bloxmove-com/did-asset-library-core-obfuscated/0.0.22/3fbf617e9ca475b1b44ec54885a7941e3c112859199699fcfc0e96f78e6af2f5",
+      "integrity": "sha512-70SY/pWQl9k+ntyFVoNcTHqStFflRgDX8uEAQmjytpMZoSY+FuPCavIq8GejgMuZY6V22udq889KJCahLVG1wQ==",
       "license": "ISC",
       "dependencies": {
         "@digitalbazaar/ed25519-signature-2018": "^2.0.1",
@@ -15423,9 +15423,9 @@
       }
     },
     "@bloxmove-com/did-asset-library-core-obfuscated": {
-      "version": "0.0.21",
-      "resolved": "https://npm.pkg.github.com/download/@bloxmove-com/did-asset-library-core-obfuscated/0.0.21/6f5b774a71c71827598d8e9c76a8d4c5be88b52715fd831f25c07cd95e3e126e",
-      "integrity": "sha512-OBFd4TFp4nhEnRNNikZjU8QHM4HYOb3USU026Z3tBt3sfgT/tSis7ZAvdmj+oEtEechWngJ7NzcICg+dHfTR0w==",
+      "version": "0.0.22",
+      "resolved": "https://npm.pkg.github.com/download/@bloxmove-com/did-asset-library-core-obfuscated/0.0.22/3fbf617e9ca475b1b44ec54885a7941e3c112859199699fcfc0e96f78e6af2f5",
+      "integrity": "sha512-70SY/pWQl9k+ntyFVoNcTHqStFflRgDX8uEAQmjytpMZoSY+FuPCavIq8GejgMuZY6V22udq889KJCahLVG1wQ==",
       "requires": {
         "@digitalbazaar/ed25519-signature-2018": "^2.0.1",
         "@digitalbazaar/ed25519-verification-key-2018": "^3.1.1",
