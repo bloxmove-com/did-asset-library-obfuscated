@@ -1,0 +1,50 @@
+import { AssetService } from './asset.service';
+import { ConfigService } from '../config/config.service';
+import { IDataProperties, PermissionsEnum } from '../interfaces/interfaces';
+import { DIDDocument } from 'did-resolver';
+import { VerifiableCredential } from '../classes/verifiable-credential.class';
+import { VerifiablePresentation } from '../classes/verifiable-presentation.class';
+export declare class OntologyAssetService implements AssetService {
+    private readonly config;
+    private readonly loggerFormat;
+    private readonly loggerOptions;
+    private readonly logger;
+    private readonly signatureScheme;
+    private readonly ontId;
+    private readonly ontPrivateKey;
+    private readonly ontPublicKeyIndex;
+    private readonly ontNodeUrl;
+    private readonly ontPublicKeyId;
+    private readonly ontologyUtilService;
+    private readonly assetHelperService;
+    constructor(config: ConfigService);
+    init(): Promise<void>;
+    createAsset(assetName: string, initialDataProperties: IDataProperties, assetType?: string): Promise<string>;
+    addInvolvedParties(assetDID: string, involvedPartiesDIDs: string[], permissions: PermissionsEnum[]): Promise<void>;
+    getInvolvedParties(assetDID: string, permission: PermissionsEnum): Promise<string[]>;
+    getDataProperty(assetDID: string, key: string, assetType?: string): Promise<string | null>;
+    createDataProperty(assetDID: string, key: string, value: string, assetType?: string, changeable?: boolean): Promise<void>;
+    getAttestations(assetDID: string, topic: string): Promise<Array<VerifiableCredential | string>>;
+    setAttestation(assetDID: string, topic: string, vc: string): Promise<void>;
+    resolveName(name: string): Promise<string | null>;
+    setName(name: string, assetDID: string): Promise<void>;
+    verifySignature: (signerDID: string, message: string, signature: string) => Promise<boolean>;
+    private isVerifiableBySomeKey;
+    private toHex;
+    getOwner(assetDID: string): Promise<string>;
+    signMessage(message: string): Promise<string>;
+    isValidDID(assetDID: string): Promise<boolean>;
+    getDIDDocument(assetDID: string): Promise<DIDDocument>;
+    setDIDDocument(didDocument: DIDDocument): Promise<void>;
+    createVerifiableCredential(type: string[], credentialSubject: {
+        id: string;
+        [key: string]: any;
+    } | Array<{
+        id: string;
+        [key: string]: any;
+    }>, expirationDate?: string): Promise<VerifiableCredential | string>;
+    createVerifiablePresentation(verifiableCredentials: Array<VerifiableCredential | string>, expirationDate?: string): Promise<VerifiablePresentation | string>;
+    validateVerifiableCredential(verifiableCredential: VerifiableCredential | string): Promise<VerifiableCredential | undefined>;
+    validateVerifiablePresentation(expectedSignerDid: string, verifiablePresentation: VerifiablePresentation | string): Promise<VerifiableCredential[]>;
+    updateDataProperty(assetDID: string, key: string, value: string, assetType?: string): Promise<void>;
+}
